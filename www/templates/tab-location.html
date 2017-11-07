@@ -1,0 +1,49 @@
+<ion-view view-title="รับข้อมูล">
+    <ion-content>
+        <div class="list">
+            <form name="formLocation" ng-submit="formSubmit(formLocation)">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Latitude</span>
+                    <input type="text" placeholder="ละติจูด" ng-model="form.LAT" ng-pattern="patternNumberDouble" required>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Longitude</span>
+                    <input type="text" placeholder="ลองจิจูด" ng-model="form.LONG" ng-pattern="patternNumberDouble" required>
+                </label>
+
+                    <button type="button" ng-click="getLocation()" class="button button-calm button-full">
+                        <i class="ion-ios-location"></i>  รับตำแหน่ง
+                    </button>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">รหัสสมาชิก</span>
+                    <input type="text" placeholder="กรอกรหัสสมาชิก 7 หลัก" ng-model="form.MASCODE" maxlength="7" size="7" ng-pattern="patternNumberInt" required>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">ชื่อ - สกุล</span>
+                    <input type="text" placeholder="ชื่อสมาชิก" ng-model="form.NAME">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">หมายเหตุ</span>
+                    <input type="text" placeholder="บันทึกข้อมูลอื่นๆ" ng-model="form.NOTE">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">ชนิดผลไม้</span>
+                    <input type="text" placeholder="กรอกชนิดผลไม้" ng-model="form.FRUIT_TYPE" required>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">จำนวนต้น</span>
+                    <input type="text" placeholder="กรอกจำนวนต้น" ng-model="form.FRUIT_QTY" ng-pattern="patternNumberInt" required>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">จำนวน ไร่</span>
+                    <input type="text" placeholder="จำนวน ไร่" ng-model="form.FRUIT_AREA" ng-pattern="patternNumberDouble" required>
+                </label>
+                <ion-radio ng-model="form.FRUIT_AGE_ID" ng-change="radioTest()" ng-repeat="a in ageRepeat" value="{{a.VALUE}}" required>{{a.NAME}}</ion-radio>
+                <button type="submit" ng-disabled="formLocation.$invalid" class="button button-positive button-full">
+                      บันทึกข้อมูล
+                </button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

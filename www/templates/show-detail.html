@@ -1,0 +1,51 @@
+<ion-view view-title="{{tabsName}}">
+    <ion-content class="padding">
+        <div class="list">
+            <div class="item">
+                <h2>Latitude</h2>
+                <p>{{getData.LAT}}</p>
+            </div>
+            <div class="item">
+                <h2>Longitude</h2>
+                <p>{{getData.LONG}}</p>
+            </div>
+            <div class="item">
+                <h2>รหัสสมาชิก</h2>
+                <p>{{getData.MASCODE}}</p>
+            </div>
+            <div class="item">
+                <h2>ชื่อ - สกุล</h2>
+                <p>{{getData.NAME}}</p>
+            </div>
+            <div class="item">
+                <h2>หมายเหตุ</h2>
+                <p>{{getData.NOTE}}</p>
+            </div>
+            <div class="item">
+                <h2>ชนิดผลไม้</h2>
+                <p>{{getData.FRUIT_TYPE}}</p>
+            </div>
+            <div class="item">
+                <h2>จำนวนต้น</h2>
+                <p>{{getData.FRUIT_QTY}}</p>
+            </div>
+            <div class="item">
+                <h2>จำนวน ไร่</h2>
+                <p>{{getData.FRUIT_AREA}}</p>
+            </div>
+            <div class="item">
+                <h2>อายุพืช</h2>
+                <p>{{plantAge.NAME}}</p>
+            </div>
+            <div class="item">
+                <h2>ทำรายการเมื่อ</h2>
+                <p>{{getData.CREATED}}</p>
+            </div>
+            <div class="item">
+              <button type="button" class="button button-full button-assertive" ng-click="delDataWhereId()">
+                <i class="ion-ios-trash-outline"></i> ลบ</button>
+            </div>
+            
+        </div>
+    </ion-content>
+</ion-view>

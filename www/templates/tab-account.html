@@ -1,0 +1,21 @@
+<ion-view view-title="ตั้งค่า">
+    <ion-content>
+        <ion-list>
+            <label class="item item-input">
+                <span class="input-label">IP เครื่องแม่</span>
+                <input type="text" ng-model="settings.SENT_TO_HOST" ng-change="SettingChange()">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">ชื่ออุปกรณ์</span>
+                <input type="text" ng-model="settings.DEVICE_NAME" ng-change="SettingChange()">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">ชื่อผู้ใช้งาน</span>
+                <input type="text" ng-model="settings.USERNAME" ng-change="SettingChange()">
+            </label>
+            <ion-toggle ng-model="settings.DElboolean" ng-change="SettingChange()">
+                ลบอัตโนมัติหลังจากส่งออก
+            </ion-toggle>            
+        </ion-list>
+    </ion-content>
+</ion-view>

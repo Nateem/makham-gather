@@ -1,0 +1,15 @@
+<ion-view view-title="ส่งออกข้อมูล">
+    <ion-content>
+        <div class="list">
+            <form name="formExport" ng-submit="formExportSubmit(formExport)">                
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">บันทึกข้อความ</span>
+                    <textarea placeholder="Message" ng-model="form.MESSAGE" required></textarea> 
+                </label>
+                <button ng-disabled="formExport.$invalid" class="button button-full button-positive">
+                    ส่งข้อมูล
+                </button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

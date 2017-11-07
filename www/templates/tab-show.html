@@ -1,0 +1,13 @@
+<ion-view view-title="แสดงผล">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-icon-right item-remove-animate" href="#/tab/show/{{l.ID}}/{{l.MASCODE}}/{{l.NAME}}" ng-repeat="l in locationRepeat">
+                <span>{{l.MASCODE + ' : ' + l.NAME}}</span>
+                <i class="icon ion-ios-arrow-forward"></i>
+                <ion-option-button class="button-assertive" ng-click="delDataWhereId(l.ID)">
+                    <i class="icon ion-ios-trash"></i>
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
